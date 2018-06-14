@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>View Available Tests</title>
+    <!-- <link rel="import" href="header.html"> -->
+    <link rel="stylesheet" type="text/css" href="accordion.css">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <link rel="stylesheet" type="text/css" href="Registration.css">
+    <link rel="stylesheet" type="text/css" href="forms-layout.css">
+    <link rel="stylesheet" type="text/css" href="ManageQuestions.css">
+    <link rel="stylesheet" type="text/css" href="ViewTests.css">
+    <link rel="stylesheet" type="text/css" href="LinkedIn.css">
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="skin">
+        <ul class="horizontal">
+            <li class="horizontal">
+                <a href="#home">Home</a>
+            </li>
+            <li class="horizontal">
+                <a href="#news">News</a>
+            </li>
+            <li class="horizontal">
+                <a href="#contact">Contact</a>
+            </li>
+            <li class="horizontal">
+                <a href="#about">About</a>
+            </li>
+            <li class="horizontal">
+                <a onclick="openModal(this)">
+                    SIGNUP
+
+                </a>
+            </li>
+        </ul>
+        <ul class="vertical">
+            <li class="vertical">
+                <a href="#Personal Information" id="personal">Company Name</a>
+            </li>
+            <li class="vertical">
+                <a href="#Education Qualification" id="work">Contact Information </a>
+            </li>
+            <li class="vertical">
+                <a href="#Work Experience" id="contact">Choose Your Package</a>
+            </li>
+            <li class="vertical">
+                <a href="#Additonal Qualification" id="about">Payment</a>
+            </li>
+        </ul>
+
+        <div class="form-container-wrapper">
+            <div class="form-container">
+                <div id="section_manageTests" class="section">
+                    <h2 class="section-heading"> Online Assessment Tests</h2>
+                    <div id="section_searchTests" class="section">
+                        <div class="row">
+                            <div class="form-group offset-1">
+                                <label for="test">Test Name</label>
+                                <input type="text" id="cdFirstName" name="testName" class="form-control" placeholder="Test Name">
+                            </div>
+                            <div class="form-group offset-by-3">
+                                <button class="button save-button search-button" onclick="window.open('Registration.html')">Search</button>
+                            </div>
+
+
+                        </div>
+
+                        <!-- <div class="row">
+                            <div class="button-group-center">
+                                <button class="button save-button search-button" onclick="window.open('Registration.html')">Search</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div id="section_viewTests" class="section">
+                        <!-- Card starts -->
+                        <div class="card-page">
+                            <div class="card package top-green">
+                                <div class="center_text">
+                                    <br>
+                                    <h3 class="test_info">Java8 Online Assessment</h1>
+                                </div>
+                            </div>
+                            <div class="card package top-green">
+                                <div class="center_text">
+                                    <br>
+                                    <h3 class="test_info">Javascript ES6 Fundamentals Assessment</h1>
+
+                                </div>
+                            </div>
+                            <div class="card package top-green">
+                                <div class="center_text">
+                                    <br>
+                                    <h3 class="test_info">HTML CSS3 and Javascript</h1>
+                                </div>
+                            </div>
+                            <div class="card package top-green">
+                                <div class="center_text">
+                                    <br>
+                                    <br>
+                                    <h3 class="test_info">AngularJS Assessment</h1>
+
+                                </div>
+                            </div>
+                            <div class="card package top-green">
+                                <div class="center_text">
+                                    <br>
+                                    <br>
+                                    <h3 class="test_info">Angular Material Assessment</h1>
+
+                                </div>
+                            </div>
+                            <div class="card package top-green">
+                                <div class="center_text">
+                                    <br>
+                                    <br>
+                                    <h3 class="test_info">React Assessment</h1>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card Ends -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="accordion.js"></script>
+    <script src="modal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage Questions</title>
+    <!-- <link rel="import" href="header.html"> -->
+    <link rel="stylesheet" type="text/css" href="accordion.css">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <link rel="stylesheet" type="text/css" href="Registration.css">
+    <!-- <link rel="stylesheet" type="text/css" href="LinkedIn.css"> -->
+    <link rel="stylesheet" type="text/css" href="forms-layout.css">
+    <link rel="stylesheet" type="text/css" href="ManageQuestions.css">
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="skin">
+        <ul class="horizontal">
+            <li class="horizontal">
+                <a href="#home">Home</a>
+            </li>
+            <li class="horizontal">
+                <a href="#news">News</a>
+            </li>
+            <li class="horizontal">
+                <a href="#contact">Contact</a>
+            </li>
+            <li class="horizontal">
+                <a href="#about">About</a>
+            </li>
+            <li class="horizontal">
+                <a onclick="openModal(this)"> 
+                    SIGNUP
+
+                </a>
+            </li>
+        </ul>
+        <ul class="vertical">
+            <li class="vertical">
+                <a href="#Personal Information" id="personal">Company Name</a>
+            </li>
+            <li class="vertical">
+                <a href="#Education Qualification" id="work">Contact Information </a>
+            </li>
+            <li class="vertical">
+                <a href="#Work Experience" id="contact">Choose Your Package</a>
+            </li>
+            <li class="vertical">
+                <a href="#Additonal Qualification" id="about">Payment</a>
+            </li>
+        </ul>
+
+        <!-- SIGNUP modal start -->
+        <div class="modal" id="editModal">
+            <div class="modal-content">
+                <div class="close" onclick="closeModal()">&times;</div>
+                <form>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" class="form-control" placeholder="Your name..">
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" class="form-control" placeholder="Your last name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="companyemail">Company Email</label>
+                            <input type="text" id="companyemail" name="companyemail" class="form-control" placeholder="vijay.nagarajan@scotiabank.com">
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="mobile">Mobile</label>
+                            <input type="text" id="mobile" name="mobile" class="form-control" placeholder="647-891-4283">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="text" id="password" name="password" class="form-control" placeholder="Enter your password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmpassword">Confirm Password</label>
+                            <input type="text" id="confirmpassword" name="password" class="form-control" placeholder="Confirm your password">
+                        </div>
+                    </div>
+        
+                    <button class="button signup-button" onclick="window.open('Registration.html')">Sign Up</button>
+        
+                </form>
+            </div>
+        </div>
+
+
+        <div class="form-container-wrapper">
+            <div class="form-container">
+                <div id="section_manageQuestions" class="section">
+                    <h2 class="section-heading"> Java Online Assessment</h2>
+                    <div class="section accordion-wrapper">
+                        <button class="accordion" id="questionButton">Question 1</button>
+                        <div class="accordion-container">
+                            <p class="answer">Answer 1</p>
+                            <p class="answer">Answer 2</p>
+                            <p class="answer">Answer 3</p>
+                            <p class="answer">Answer 4</p>
+                            <div class="button-group-right">
+                                <button class="button save-button" onclick="openModal(this)">Edit</button>
+                                <button class="button save-button" onclick="openModal(this)">Delete hero</button>
+                                <div id="deleteModal"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section accordion-wrapper">
+                        <button class="accordion" id="questionButton">Question 2</button>
+                        <div class="accordion-container">
+                            <p class="answer">Answer 1</p>
+                            <p class="answer">Answer 2</p>
+                            <p class="answer">Answer 3</p>
+                            <p class="answer">Answer 4</p>
+                            <div class="button-group-right">
+                                <button class="button save-button" onclick="openModal()">Edit</button>
+                                <button class="button save-button" onclick="openModal(this)">Delete hero</button>
+                                <div id="deleteModal"></div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="section accordion-wrapper">
+                        <button class="accordion" id="questionButton">Question 3</button>
+                        <div class="accordion-container">
+                            <p class="answer">Answer 1</p>
+                            <p class="answer">Answer 2</p>
+                            <p class="answer">Answer 3</p>
+                            <p class="answer">Answer 4</p>
+                            <div class="button-group-right">
+                                <button class="button save-button" onclick="openModal()">Edit</button>
+                                <button class="button save-button" onclick="openModal(this)">Delete hero</button>
+                                <div id="deleteModal"></div>
+
+                            </div>
+                        </div>
+                    </div>    
+                    
+                    <div class="section accordion-wrapper">
+                        <button class="accordion" id="questionButton">Question 4</button>
+                        <div class="accordion-container">
+                            <p class="answer">Answer 1</p><span>Before question 4</span><span style="margin : 30px;">Before question 4</span>
+                            <p class="answer">Answer 2</p>
+                            <p class="answer">Answer 3</p>
+                            <p class="answer">Answer 4</p>
+                            <div class="button-group-right">
+                                <button class="button save-button" onclick="openModal()">Edit</button>
+                                <button class="button save-button" onclick="openModal(this)">Delete hero</button>
+                                <div id="deleteModal"></div>
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+    
+        </div>        
+    </div>
+
+    <script src="accordion.js"></script>
+    <script src="modal.js"></script>
+</body>
+
+</html>

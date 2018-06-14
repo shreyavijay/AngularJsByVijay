@@ -1,0 +1,40 @@
+footer {
+    background-color: green;
+    height: 150px;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    bottom: 0px;
+    padding: 2px 100px;
+    display: flex;
+}
+
+/* footer  */
+ul.footer {
+    width: 20%;
+    display: inline-block;
+    left: 10px;
+}
+
+li.footer {
+    padding: 0px;
+    display: block;
+    /* width: 15%; */
+    margin: 5px;
+    /* padding: 5px; */
+}
+
+li.footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px 2px;
+     
+}
+
+li.footer a:hover {
+    cursor: pointer;
+    border-bottom: 2px solid;
+}
+

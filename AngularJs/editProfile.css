@@ -1,0 +1,265 @@
+.font_section_header {
+	color: rgba(0,0,0,.55);
+	font-size: 20px;
+	font-style: normal;
+	font-family: Sans;
+	font-weight: normal;
+	display: block;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+	width: 100%;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 0px;
+    cursor: pointer;
+}
+
+.save-button {
+	width: 25%;
+	padding: 5px 5px;
+	text-align: center;
+	margin-left:auto;
+	
+	
+}
+.personal_info_name {
+	color: rgba(0,0,0,.85);
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Sans;
+	line-height: 20px;
+	display: block;		
+	text-overflow: ellipsis;
+}
+
+.personal_info_other {
+	color: rgba(0,0,0,.55);
+	font-size: 13px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 16px;
+	display: block;
+	text-overflow: ellipsis
+}
+
+.personal_info {
+	text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: auto;	
+}
+
+.img-connections {
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: auto;	
+}
+
+p{
+   margin: auto;
+}
+.skin {
+	background-color: rgb(221, 221, 221);
+    height: 800px;
+    width: 100%;
+}
+
+img.connections {
+	display: block;
+	margin:auto;
+}
+
+.card-frame {
+    float: left;
+    position: relative;
+	height: 800px;
+    width: 700px;
+    margin-right: 10px;
+    border: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+div.edit-profile {
+	float: left;
+		
+	width:  60%;
+	position: relative;
+}
+
+.link-showing-connections {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	color: green;
+	font-size: 30px;
+	font-style: normal;
+	font-family: Sans;
+	font-weight: semibold;	
+}
+
+.link-Connections-all {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	color: green;
+	font-size: 15px;
+	font-style: normal;
+	font-family: Sans;
+	font-weight: bold;	
+	margin-top:4px;
+	margin-bottom:16px;
+}
+
+.link-Connections-all:hover {
+	text-decoration: underline;
+}
+
+.connections-title {
+	font-size: 17px;
+	font-style: normal;
+	font-family: sans-pro;
+	font-weight: 400;	
+	margin: 0px 10px;
+}
+
+
+.card-page {
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+.card-section {
+  padding: 5px 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 15px; 	
+}
+
+.card {
+  position: relative;
+  padding: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border: 1px solid #ddd;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    background-color: green;
+}
+
+ul li {
+     margin: 0;
+     display:inline;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   	font-family: Actor;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 200;
+}	
+
+
+li a:hover {
+    background-color: 	#00FF00;
+    color: white;
+ }
+
+h3.section-heading {
+	font-size: 16px;
+	font-family: Sans;
+	font-weight: bold;	
+
+} 
+
+ div.card > input {
+	padding: 5px;
+	width:90%;
+	margin: 5px 0px;
+}
+
+ a.linkText {
+	color: rgba(0,0,0,.55);
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 5px;
+	width:90%;
+	margin: 5px 0px;	
+	text-decoration: none;
+	
+ } 
+ 
+ p.legalText {
+	color: rgba(0,0,0,.55);
+	font-size: 13px;
+	font-style: Sans;
+	font-weight: normal;
+	line-height: 16px;
+ }
+ 
+ /* Style the Accordion Panel*/
+ div.panel {
+	background-color: #f2f2f2;
+	Padding: 2px;
+	padding: 0px 10px;
+    border: 1px solid #A9A9A9;	
+	box-shadow: 0 4px 8px 0 #ddd, 0 6px 20px 0 #ddd;
+	display: none;
+ }
+ 
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} 
+
+/*style for button icon of accordion*/
+button.accordion::after {
+	content: '\02795'; /* For + sign*/
+	font-size: 11px;
+	float: right;
+ } 
+ 
+ button.accordion.active::after {
+	content: '\2796'; /* For Unicode for - sign*/
+ } 
+

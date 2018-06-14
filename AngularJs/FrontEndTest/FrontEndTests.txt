@@ -1,0 +1,31 @@
+﻿https://github.com/h5bp/Front-end-Developer-Interview-Questions#css-questions
+https://www.testdome.com/tests/html-css-javascript-online-test/16
+http://davidshariff.com/quiz/
+https://tests4geeks.com/programming-tests
+
+// Code goes here
+var holder = (function(){
+
+  var replaceText = function(){
+    document.getElementById("test").innerHTML = "Hello Vijay";
+  }; 
+  
+  return {
+     replaceText: function(){
+        replaceText();
+     }
+  };
+  
+  })(); 
+  
+var registerClickHandler=function(){
+    var divElements = document.querySelectorAll(".image");
+    console.log(divElements);
+    for(i = 0; i < divElements.length; i++){.children.length
+      for(j=0; j < divElements.children.length; j++){
+        console.log(divElements[i].children[j]);  
+      }
+      
+    }
+ };
+

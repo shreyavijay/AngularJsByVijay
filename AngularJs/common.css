@@ -1,0 +1,190 @@
+.summary-card {
+    width: 200px;
+    float: left;
+    left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 0px;
+	border: 1px solid rgb(194, 185, 185);
+    background-color: white;
+	position: relative;
+}
+
+.summary-card > .card:last-child {
+	background-color: rgb(221, 131, 131);
+}
+
+.summary-card > .card {
+	width: auto;
+}
+
+div.center {
+	text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;    
+}
+/* :horizontal navigation bar */
+
+ul.horizontal {
+    /* list-style-type: none; */
+    margin: 0px 0px 10px 0px;
+    /* padding: 0; */
+    width: 100%;
+    display: inline-block;
+    background-color: green;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+ul.horizontal li {
+     margin: 0;
+     display: inline;
+}
+
+li.horizontal a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 1.5px 16px;
+    margin: 10px 0px;
+    text-decoration: none;
+   	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 200;
+}	
+
+li a:hover {
+    /* background-color: green;
+    color: white; */
+    margin-bottom: 2px;
+    border-bottom: 4px solid;
+    border-bottom-color: white;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+ }
+
+ /* :vertical navigation bar */
+ ul.vertical {
+    list-style-type: none;
+	margin: 40px 10px;
+    padding: 0px;
+    width: 20%;
+	float: left;
+    /* background-color: green; */
+    top: 50px;
+    left: 0px;
+    position: fixed;
+}
+
+ul.vertical li {
+    border: 1px solid green;
+    margin: 20px;
+    padding: 0;
+    border-radius: 5px; 
+}
+
+li.vertical a {
+    display: block;
+	/* border: 1px solid white; */
+    color: green;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+}	
+
+.button {
+    background-color: white; /* Green */
+    border: 1px solid green;
+    color: green;
+	width: 100%;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.button.save-button {
+	width: 25%;
+	padding: 10px 5px;
+	border-radius: 5px;
+    /* text-align: center; */
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: green;
+    color: white;
+}
+
+div.section {
+	margin: 20px;
+	/* background-color: #f2f2f2; */
+	background-color: white;
+	border: 1px solid #A9A9A9;
+	border-radius: 5px;	
+	box-shadow: 0 4px 8px 0 #ddd, 0 6px 20px 0 #ddd;
+	padding: 10px;
+}
+
+.button-group-right {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+}
+
+.button-group-center {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: nowrap;
+}
+
+li.vertical a:hover {
+    background-color: green;
+    color: white;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    color: white;
+    background-color:green;
+    z-index: 20;
+    position: absolute;
+    top:12px;
+    left:10px;
+    padding: 2px;    
+    text-align: center; 
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+.tooltip:hover {
+    cursor: pointer;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+

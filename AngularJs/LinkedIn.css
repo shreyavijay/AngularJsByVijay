@@ -1,0 +1,234 @@
+.font_section_header {
+	color: rgba(0,0,0,.55);
+	font-size: 20px;
+	font-style: normal;
+	font-family: Sans;
+	font-weight: normal;
+	display: block;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+}
+
+.personal_info_name {
+	color: rgba(0,0,0,.85);
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Sans;
+	line-height: 20px;
+	display: block;		
+	text-overflow: ellipsis;
+}
+
+.personal_info_other {
+	color: rgba(0,0,0,.55);
+	font-size: 13px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 16px;
+	display: block;
+	text-overflow: ellipsis
+}
+
+.personal_info {
+	text-align: center;
+}
+
+.center_text {
+	text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: auto;	
+}
+
+.img-connections {
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: auto;	
+}
+
+p{
+   margin: auto;
+}
+.skin {
+	background-color: #f1f1f1!important;
+    height: 800px;
+    width: 100%;
+}
+
+img.connections {
+	display: block;
+	margin:auto;
+}
+
+.card-frame {
+    float: left;
+    position: relative;
+	height: 800px;
+    width: 700px;
+    margin-right: 10px;
+    border: 10px;
+    margin-left: 10px;
+    padding: 0px;
+    
+}
+
+.link-showing-connections {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	color: green;
+	font-size: 30px;
+	font-style: normal;
+	font-family: Sans;
+	font-weight: semibold;	
+}
+
+.link-Connections-all {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	color: green;
+	font-size: 15px;
+	font-style: normal;
+	font-family: Sans;
+	font-weight: bold;	
+	margin-top:4px;
+	margin-bottom:16px;
+}
+
+.link-Connections-all:hover {
+	text-decoration: underline;
+}
+
+.connections-title {
+	font-size: 17px;
+	font-style: normal;
+	font-family: sans-pro;
+	font-weight: 400;	
+	margin: 0px 10px;
+}
+
+.card-page {
+  display: flex;
+  margin: 0px;
+  flex-flow: row wrap;
+}
+
+.card-section {
+  padding: 5px 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 15px; 	
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  margin: 5px;
+  padding: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+}
+
+.remove-border {
+	border-style: none;
+}
+
+
+h3.section-heading {
+	font-size: 16px;
+	font-family: Sans;
+	font-weight: bold;	
+
+} 
+
+ div.card > input {
+	padding: 5px;
+	width:90%;
+	margin: 5px 0px;
+}
+
+ a.linkText {
+	color: rgba(0,0,0,.55);
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 5px;
+	width:90%;
+	margin: 5px 0px;	
+	text-decoration: none;
+	
+ } 
+ 
+ p.legalText {
+	color: rgba(0,0,0,.55);
+	font-size: 13px;
+	font-style: Sans;
+	font-weight: normal;
+	line-height: 16px;
+ }
+ 
+ /*style for button of accordion*/
+ button.accordion {
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width:100%;
+	transition: 0.4s;
+ }
+ 
+ /*style for button of accordion*/
+ button.accordion.active, button.accordion:hover {
+	background-color: green;
+ }
+
+/*style for button icon of accordion*/
+ button.accordion::after {
+	content: '\02795';
+	font-size: 11px;
+	float: right;
+	color: red;
+	border: none;
+ } 
+ 
+button.accordion.active::after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+} 
+ 
+ /* Style the Accordion Panel*/
+ div.panel {
+	background-color: #f2f2f2;
+	Padding: 2px;
+	padding: 0px 10px;
+    border: 1px solid #A9A9A9	;	
+	box-shadow: 0 4px 8px 0 #ddd, 0 6px 20px 0 #ddd;
+	display: none;
+ }
+ 
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} 
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration</title>
+	<!-- <link rel="import" href="header.html"> -->
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="modal.css">
+	<link rel="stylesheet" type="text/css" href="Registration.css">
+	<link rel="stylesheet" type="text/css" href="LinkedIn.css">
+	<link rel="stylesheet" type="text/css" href="forms-layout.css">
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+	<div class="skin">
+		<ul class="horizontal">
+			<li class="horizontal">
+				<a href="#home">Home</a>
+			</li>
+			<li class="horizontal">
+				<a href="#news">News</a>
+			</li>
+			<li class="horizontal">
+				<a href="#contact">Contact</a>
+			</li>
+			<li class="horizontal">
+				<a href="#about">About</a>
+			</li>
+			<li class="horizontal">
+				<a onclick="openModal()">Sign Up </a>
+			</li>
+		</ul>
+		<ul class="vertical">
+			<li class="vertical">
+				<a href="#Personal Information" id="personal">Company Name</a>
+			</li>
+			<li class="vertical">
+				<a href="#Education Qualification" id="work">Contact Information </a>
+			</li>
+			<li class="vertical">
+				<a href="#Work Experience" id="contact">Choose Your Package</a>
+			</li>
+			<li class="vertical">
+				<a href="#Additonal Qualification" id="about">Payment</a>
+			</li>
+		</ul>
+		<!-- SIGNUP modal start -->
+		<div class="modal">
+			<div class="modal-content">
+				<div class="close" onclick="closeModal()">&times;</div>
+				<form>
+					<div class="row">
+						<div class="form-group">
+							<label for="fname">First Name</label>
+							<input type="text" id="fname" name="firstname" class="form-control" placeholder="Your name..">
+						</div>
+						<div class="form-group">
+							<label for="lname">Last Name</label>
+							<input type="text" id="lname" name="lastname" class="form-control" placeholder="Your last name..">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<label for="companyemail">Company Email</label>
+							<input type="text" id="companyemail" name="companyemail" class="form-control" placeholder="vijay.nagarajan@scotiabank.com">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group">
+							<label for="mobile">Mobile</label>
+							<input type="text" id="mobile" name="mobile" class="form-control" placeholder="647-891-4283">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="text" id="password" name="password" class="form-control" placeholder="Enter your password">
+						</div>
+						<div class="form-group">
+							<label for="confirmpassword">Confirm Password</label>
+							<input type="text" id="confirmpassword" name="password" class="form-control" placeholder="Confirm your password">
+						</div>
+					</div>
+
+					<button class="button signup-button" onclick="window.open('Registration.html')">Sign Up</button>
+
+				</form>
+			</div>
+
+		</div>
+		<!-- modal end -->
+
+		<div class="form-container-wrapper">
+			<div class="form-container">
+				<div id="section1" class="section">
+					<h2 class="section-heading">Company Information</h2>
+					<div class="row">
+						<!-- <div class="form-group form-group-offset-2"> -->
+						<div class="form-group offset-2">	
+							<label for="fname">Company Name</label>
+							<input type="text" id="companyname" name="companyname" class="form-control" placeholder="Company name..">
+						</div>
+					</div>
+					<div class="row">
+						<!-- <div class="form-group form-group-offset-2"> -->
+						<div class="form-group offset-2">	
+							<label for="websiteurl">Website Url</label>
+							<input type="text" id="websiteurl" name="websiteurl" class="form-control" placeholder="wsebsite address..">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<label for="industry">Industry</label>
+							<select id="industry" name="industry" class="form-control">
+								<option value="IT">Information Technology</option>
+								<option value="Accountancy">Accountancy</option>
+								<option value="Manufacturing">Manufacturing</option>
+							</select>
+						</div>
+					</div>
+					<div class="button-group-right">
+						<button class="button save-button">Next</button>
+					</div>
+				</div>
+				<div id="section2" class="section">
+					<h2 class="section-heading">Contact Information</h2>
+					<div class="row">
+						<div class="form-group">
+							<label for="country">Country</label>
+							<select id="country" name="country" class="form-control">
+								<option value="Canada">Canada</option>
+								<option value="US">United States</option>
+							</select>
+						</div>
+
+					</div>
+					<div class="form-group">
+						<label for="companyaddress">Company Address*</label>
+						<input type="text" id="companyaddress" name="companyaddress" class="form-control" placeholder="93 gatesgill street">
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<label for="city">City*</label>
+							<input type="text" id="city" name="city" class="form-control" placeholder="Brampton">
+						</div>
+						<div class="form-group">
+							<label for="province">State/Province*</label>
+							<select id="province" name="province" class="form-control">
+								<option value="ON">Ontario</option>
+								<option value="NS">Nova Scotia</option>
+								<option value="QC">Quebec</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="postalzipcode">PostalCode/ZipCode*</label>
+						<input type="text" id="postalzipcode" name="postalzipcode" class="form-control" placeholder="L6X 3T1">
+					</div>
+					<div class="button-group-right">
+						<button class="button save-button">Next</button>
+					</div>
+				</div>
+				<div id="section3" class="section">
+					<h2 class="section-heading">Choose Your Package</h2>
+					<!-- Card starts -->
+					<div class="card-page">
+
+						<div class="card package">
+							<div class="center_text">
+								<br>
+								<h1 class="package_info">Gold Package</h1>
+								<p class="package_info package_desc">$100/month</p>
+								<p class="package_info package_desc">20 candidates per day</p>
+								<p class="package_info package_desc detailed_1">Coding and Objectve type tests</p>
+							</div>
+							<div class="bottom-section">
+								<button class="button">Buy Now</button>
+							</div>
+
+						</div>
+						<div class="card package">
+							<div class="center_text">
+								<br>
+								<h1 class="package_info">Silver Package</h1>
+								<p class="package_info package_desc">$75/month</p>
+								<p class="package_info package_desc">15 candidates per day</p>
+								<p class="package_info package_desc detailed_1">Coding and Objectve type tests</p>
+							</div>
+							<div class="bottom-section">
+								<button class="button">Buy Now</button>
+							</div>
+
+						</div>
+						<div class="card package">
+							<div class="center_text">
+								<br>
+								<h1 class="package_info">Bronze Package</h1>
+								<p class="package_info package_desc">$50/month</p>
+								<p class="package_info package_desc">10 candidates per day</p>
+								<p class="package_info package_desc detailed_1">Coding and Objectve type tests</p>
+
+							</div>
+							<div class="bottom-section">
+								<button class="button">Buy Now</button>
+							</div>
+
+						</div>
+					</div>
+					<!-- Card Ends -->
+				</div>
+				<div id="section4" class="section">
+					<h2 class="section-heading">Payment Method</h2>
+					<!-- <div class="row"> -->
+					<div class="row">
+						<div class="form-group">
+							<label for="nameoncard">Name on Card</label>
+							<input type="text" id="nameoncard" name="nameoncard" class="form-control" placeholder="G Raymond">
+						</div>
+					</div>
+					<div class="row">
+							<div class="form-group">
+								<label for="cardnumber">Card Number</label>
+								<input type="text" id="cardnumber" name="cardnumber" class="form-control" placeholder="3444 4865 4467 4778">
+							</div>
+						</div>					
+					<div class="row">
+						<div class="form-group offset-by-3">
+							<label for="validthrough">Valid Through</label>
+							<input type="text" id="cardmonthofexpiry" name="cardmonthofexpiry" class="form-control" placeholder="MM">
+						</div>
+						<div class="form-group offset-by-3">
+							<select id="cardyearofexpiry" name="cardyearofexpiry" class="form-control">
+									<option value="2018">2018</option>
+									<option value="2019">2019</option>
+									<option value="2020">2020</option>
+									<option value="2021">2021</option>
+									<option value="2022">2022</option>
+									<option value="2023">2023</option>
+									<option value="2024">2024</option>
+									<option value="2025">2025</option>
+							</select>
+		
+						</div>
+
+					</div>
+					<div class="button-group-right">
+						<button class="button save-button">Next</button>
+					</div>
+
+				</div>
+
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<script>
+
+		$(document).ready(function () {
+
+			function scrollToNthChild(index) {
+				console.log('printing section1 scrollToNthChild', index);
+				var scrollToSection = $("div.section:nth-child(" + index + ")").position();
+				console.log('printing section1 scrollToNthChild', scrollToSection);
+				$("html, body").animate({
+					scrollTop: scrollToSection.top
+				}
+					, 1000);
+			}
+			//jQuery methods go here...
+
+			$("li.vertical > a").click(function () {
+				var selectedItemIndex = $("li.vertical").index($(this).parent()) + 1;
+				console.log('Index of ', selectedItemIndex);
+				scrollToNthChild(selectedItemIndex);
+			});
+
+			window.openModal = function () {
+				$(".modal").addClass("active");
+			}
+
+			window.closeModal = function () {
+				$(".modal").removeClass("active");
+			}
+
+
+		});
+
+	</script>
+</body>
+
+</html>

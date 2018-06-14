@@ -1,0 +1,36 @@
+xc c /*stEmailyle    for button of  accordion */
+ button.accordion {
+	/* background-color: #4CAF50; */
+	border: 1px solid green;
+	background-color: white;
+	color: green;
+	cursor: pointer;
+	padding: 18px;
+	width:100%;
+	border-radius: 5px;
+	transition: 0.4s;
+	text-align: left;
+ }
+ 
+/*style for button of accordion*/
+button.accordion.active, button.accordion:hover {
+	background-color: green;
+	color: white;
+}
+
+div.section.accordion-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-flow:column nowrap; 
+	padding: 0px;
+	border: 1px solid green;
+}
+
+div.accordion-container {
+	margin: 5px 5px;
+	padding: 5px 5px;
+	display: none;
+}
+
+
+

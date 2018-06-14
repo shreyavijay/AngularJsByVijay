@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vijay's Linked Site</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="LinkedIn.css">
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+	<div class="skin">
+		<ul class="horizontal">
+			<li class="horizontal">
+				<a href="#home">Home</a>
+			</li>
+			<li class="horizontal">
+				<a href="#news">News</a>
+			</li>
+			<li class="horizontal">
+				<a href="#contact">Contact</a>
+			</li>
+			<li class="horizontal">
+				<a href="#about">About</a>
+			</li>
+		</ul>
+
+		<div class="summary-card">
+			<div class="card remove-border">
+				<a href="#" class="link-showing-connections">
+					173
+				</a>
+				<h3 class="connections-title">Your Connections</h3>
+				<a href="#" class="link-Connections-all">
+					See All
+				</a>
+				<img src="https://www.w3schools.com/css/paris.jpg" class="img-connections" alt="Paris">
+				<img src="https://www.w3schools.com/css/paris.jpg" class="img-connections" alt="Paris">
+				<img src="https://www.w3schools.com/css/paris.jpg" class="img-connections" alt="Paris">
+			</div>
+			<hr>
+			<div class="card remove-border center">
+				<h3 class="section-heading">Add Personal Contacts</h3>
+				<input type="text" name="email">
+				<button class="button">Green</button>
+				<a href="#" class="linkText">
+					More Options
+				</a>
+
+			</div>
+			<div class="card remove-border">
+				<p class="legalText">We’ll import your address book to suggest connections. Learn more</p>
+			</div>
+		</div>
+
+		<!--Center section-->
+		<div class="card-frame">
+			<div class="card-page">
+				<div class="card-section">
+					<h1 class="font_section_header">No Pending Invitations</h1>
+				</div>
+
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://www.w3schools.com/css/paris.jpg" class="connections" alt="Paris">
+					<div class="personal_info">
+						<span class="personal_info_name">Hey Soda Mava</span>
+						<span class="personal_info_other">BE CSE</span>
+						<span class="personal_info_other">SIT</span>
+						<button class="button">Green</button>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<script>
+
+
+
+			$(document).ready(function () {
+				// jQuery methods go here...
+				$("button.accordion").click(function () {
+					$("this").toggleClass("button.accordion.active");
+					if ($("this").css("display") === "block") {
+						console.log($(this).next());
+						$("this").next().toggle();
+					} else {
+
+						$("this").next().toggle();
+						console.log($(this).next().toggle().css("display"));
+					}
+
+				});
+			});
+
+		</script>
+</body>
+
+</html>

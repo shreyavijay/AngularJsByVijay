@@ -1,0 +1,67 @@
+div.form-group {
+	/* margin */
+	width: 45%;
+	margin: auto 10px;
+	display: inline-block;
+}
+
+div.form-group.offset-1 {
+	width: 55%;
+}
+
+div.form-group.offset-2 {
+	width: 65%;
+}
+
+.form-group.offset-by-3{
+	width: 34%;
+}
+
+div.form-group > label{
+	font-size: 14px;
+	font-style: Sans;
+	font-weight: 600;	
+	width: 100%;
+	/* display: block; */
+}
+
+div.row {
+	display: block;
+	width: 100%;
+}
+
+div.form-group > .form-control{
+	display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;	
+}
+
+div.form-container-wrapper {
+	float: left;
+	top: 50px;
+	left: 250px;
+	width: 60%;
+	margin: 10px;
+	padding: 10px;
+	margin-bottom: 300px;
+	position: relative!important;
+	/* position:fixed; */
+
+}
+div.form-container {
+	z-index: 1;
+	position: relative!important;
+	/* float: left; */
+	/* position: relative!important; */
+	/* position: relative!important; */
+	/* top: 45px;
+	left: 250px;
+	width: 60%;
+	margin: 10px;
+	padding: 10px;
+	margin-bottom: 300px; */
+}

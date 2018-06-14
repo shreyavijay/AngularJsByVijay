@@ -1,0 +1,43 @@
+div {
+    /* color: white; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 15px;
+}
+
+.fa {
+    color: white;
+    font-size: 20px;
+    width: 25px;
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    height: 20px;
+    margin: 5px 15px;
+}
+
+.copyrighttext {
+    height: 20px;
+}
+
+.fa-copyright {
+    font-size: 15px;
+    width: 15px;
+    margin: 5px;
+    padding: 7px;
+    border: none;
+    
+}
+
+.fa:hover {
+    opacity: .70;
+}

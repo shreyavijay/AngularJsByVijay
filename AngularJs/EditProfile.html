@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<link rel="stylesheet" type="text/css" href="accordion.css">
+<link rel="stylesheet" type="text/css" href="editProfile.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vijay's Linked Site</title>
+ 
+ <script src="jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<div class="skin">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  
+<div class="summary-card">
+<div class="card">
+	<a href="#" class="link-showing-connections">
+		173
+	</a>
+	<h3 class="connections-title">Your Connections</h3>
+	<a href="#" class="link-Connections-all">
+		See All
+	</a>
+	<img src="https://www.w3schools.com/css/paris.jpg" class="img-connections" alt="Paris">
+	<img src="https://www.w3schools.com/css/paris.jpg" class="img-connections" alt="Paris">
+	<img src="https://www.w3schools.com/css/paris.jpg" class="img-connections" alt="Paris">
+	
+
+</div>
+
+<div class="card remove-border center">
+	<h3 class="section-heading">Add Personal Contacts</h3>
+	<input type="text" name="email"> 
+	<button class="button">Green</button>
+	<a href="#" class="linkText">
+		More Options
+	</a>
+
+</div>
+<div class="card">
+	<p class="legalText">We’ll import your address book to suggest connections. Learn more</p>
+</div>	
+</div>
+
+<div class="edit-profile">
+	<button class="accordion" id="buttonone">Edit Work Experience</button>
+	<div class="panel" id="panel1">
+	  <form action="/action_page.php">
+		<label for="fname">First Name</label>
+		<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+		<label for="lname">Last Name</label>
+		<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+		<label for="country">Country</label>
+		<select id="country" name="country">
+		  <option value="australia">Australia</option>
+		  <option value="canada">Canada</option>
+		  <option value="usa">USA</option>
+		</select>
+	  
+		<button class="button save-button">Save</button> 
+	  </form>		
+	</div>
+	
+</div>
+
+<div class="edit-profile">
+	<button class="accordion" id="buttontwo">Edit Work Experience</button>
+	<div class="panel" id="panel2">
+	  <form action="/action_page.php">
+		<label for="fname">First Name</label>
+		<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+		<label for="lname">Last Name</label>
+		<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+		<label for="country">Country</label>
+		<select id="country" name="country">
+		  <option value="australia">Australia</option>
+		  <option value="canada">Canada</option>
+		  <option value="usa">USA</option>
+		</select>
+	  
+		<button class="button save-button">Save</button> 
+	  </form>		
+	</div>
+	
+</div>
+<script>
+	
+
+
+$(document).ready(function(){
+   // jQuery methods go here...
+	$("button.accordion").click(function(){
+		$(this).toggleClass("active");
+		$(this).next().toggle().css("display")
+/*
+		if($(this).css("display") === "block"){
+			console.log($(this).next());
+			$("this").next().toggle();
+		} else {
+			$(this).next().toggle().css("display")
+			
+		}
+	*/	
+		});
+	}); 
+
+</script>
+</body>
+</html>
