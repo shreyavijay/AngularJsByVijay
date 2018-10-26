@@ -41,15 +41,15 @@ div.form-group > .form-control{
 }
 
 div.form-container-wrapper {
-	clear: right;
+
 	top: 50px;
-	left: 250px;
+	left: 300px;
 	width: 60%;
 	margin: 10px;
 	padding: 10px;
 	margin-bottom: 300px;
 	position: relative!important;
-	/* position:fixed; */
+
 
 }
 div.form-container {

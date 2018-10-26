@@ -1,0 +1,41 @@
+
+ /* :vertical navigation bar */
+ ul.vertical {
+    list-style-type: none;
+	margin: 40px 10px;
+    padding: 0px;
+    width: 20%;
+	float: left;
+
+    top: 50px;
+    left: 0px;
+    position: fixed;
+}
+
+ul.vertical li {
+    /* border: 1px solid green; */
+    margin: 20px;
+    padding: 0;
+    border-radius: 5px; 
+}
+
+li.vertical a {
+    display: block;
+    border: 1.25px solid green; 
+    color: green;
+    background-color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+    font-weight: 400;
+    border-radius: 5px;
+}	
+
+li.vertical a:hover {
+    background-color: green;
+    color: white;
+}
