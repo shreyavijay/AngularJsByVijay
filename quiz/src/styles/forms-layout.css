@@ -1,7 +1,10 @@
 div.form-group {
 	/* margin */
 	width: 45%;
-	margin: auto 10px;
+	margin-top: 0%;
+	margin-bottom: 1%;
+	margin-left: 10px;
+	margin-right: 10px;
 	display: inline-block;
 }
 
@@ -26,9 +29,11 @@ div.form-group > label{
 }
 
 div.row {
-	display: block;
+	display: flex;
 	width: 100%;
-}
+	flex-flow: row wrap;
+	align-items: flex-start;
+	}
 
 div.form-group > .form-control{
 	display: block;
@@ -43,7 +48,8 @@ div.form-group > .form-control{
 div.form-container-wrapper {
 
 	top: 50px;
-	left: 300px;
+	/* left: 300px; */
+	left: 25%;
 	width: 60%;
 	margin: 10px;
 	padding: 10px;

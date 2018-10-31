@@ -13,14 +13,22 @@
             <a href="#about">About</a>
         </li>
         <li class="horizontal">
-            <a onclick="openModal(this)">
-                SIGNUP
+            <a (click)="signUp=true">
+                SignUp
             </a>
         </li>
+        <li class="horizontal">
+            <a (click)="signIn=true">
+                SignIn
+            </a>
+        </li>
+        
     </ul>
+
     <!-- app-vertical-navbar     -->
     <app-vertical-navbar></app-vertical-navbar>
-
+    <app-sign-in *ngIf="signIn"></app-sign-in>
+    <app-sign-up *ngIf="signUp"></app-sign-up>
     <div id="main-screen" class="main-screen">
 
         <div class="form-container-wrapper">

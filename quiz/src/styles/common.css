@@ -84,6 +84,10 @@ li.horizontal a:hover {
     cursor: pointer;
 }
 
+button:disabled {
+    background: #dddddd;
+}
+
 .button.save-button {
 	width: 25%;
 	padding: 10px 5px;
