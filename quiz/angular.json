@@ -38,7 +38,8 @@
               "src/styles/modal.css",
               "src/styles/Registration.css",
               "src/styles/table.css",
-              "src/styles/ViewTests.css"              
+              "src/styles/ViewTests.css",      
+              "src/styles/alert.css"        
 
 
             ],
