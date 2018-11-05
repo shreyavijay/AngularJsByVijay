@@ -1,0 +1,176 @@
+<!-- form starts -->
+
+<div class="form-container-wrapper">
+  <div class="form-container">
+    <form #userRegistrationForm="ngForm">
+      <div id="section1" class="section">
+        <h2 class="section-heading">Company Information</h2>
+        <div class="row">
+
+          <div class="form-group offset-2">
+            <label for="fname">Company Name</label>
+            <input type="text" id="companyname" name="companyname" class="form-control" #companyname="ngModel" [(ngModel)]="user.companyname"  required maxlength="40" placeholder="Company name..">
+            <div *ngIf="companyname.invalid && (companyname.dirty || companyname.touched)" class="alert alert-danger">
+              <div *ngIf="companyname.errors?.required">
+                Company is required.
+              </div>
+              <div *ngIf="companyname.errors?.maxlength">
+                Company exceeds 40 characters.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- <div class="form-group form-group-offset-2"> -->
+          <div class="form-group offset-2">
+            <label for="websiteurl">Website Url</label>
+            <input type="text" id="websiteurl" name="websiteurl" class="form-control" #websiteurl="ngModel" [(ngModel)]="user.websiteurl" placeholder="wsebsite address..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="industry">Industry</label>
+            <select id="industry" name="industry" class="form-control" #industry="ngModel" [(ngModel)]="user.industry">
+              <option value="IT">Information Technology</option>
+              <option value="Accountancy">Accountancy</option>
+              <option value="Manufacturing">Manufacturing</option>
+            </select>
+          </div>
+        </div>
+        <div class="button-group-right">
+          <button class="button save-button">Next</button>
+        </div>
+      </div>
+      <div id="section2" class="section">
+        <h2 class="section-heading">Contact Information</h2>
+        <div class="row">
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country" class="form-control" #industry="ngModel" [(ngModel)]="user.country"> 
+              <option value="Canada">Canada</option>
+              <option value="US">United States</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="companyaddress">Company Address*</label>
+          <input type="text" id="companyaddress" name="companyaddress" class="form-control" #companyaddress="ngModel" [(ngModel)]="user.companyaddress" placeholder="93 gatesgill street">
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="city">City*</label>
+            <input type="text" id="city" name="city" class="form-control" #city="ngModel" [(ngModel)]="user.city" placeholder="Brampton">
+          </div>
+          <div class="form-group">
+            <label for="province">State/Province*</label>
+            <select id="province" name="province" class="form-control">
+              <option value="ON">Ontario</option>
+              <option value="NS">Nova Scotia</option>
+              <option value="QC">Quebec</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="postalzipcode">PostalCode/ZipCode*</label>
+          <input type="text" id="postalzipcode" name="postalzipcode" class="form-control" #postalcode="ngModel" [(ngModel)]="user.postalcode" placeholder="L6X 3T1">
+        </div>
+        <div class="button-group-right">
+          <button class="button save-button">Next</button>
+        </div>
+      </div>
+      <div id="section3" class="section">
+        <h2 class="section-heading">Choose Your Package</h2>
+        <!-- Card starts -->
+        <div class="card-page">
+
+          <div class="card package">
+            <div class="center_text">
+              <br>
+              <h1 class="package_info">Gold Package</h1>
+              <p class="package_info package_desc">$100/month</p>
+              <p class="package_info package_desc">20 candidates per day</p>
+              <p class="package_info package_desc detailed_1">Coding and Objectve type tests</p>
+            </div>
+            <div class="bottom-section">
+              <button class="button" name="gold" (click)="user.package='gold'">Buy Now</button>
+            </div>
+
+          </div>
+          <div class="card package">
+            <div class="center_text">
+              <br>
+              <h1 class="package_info">Silver Package</h1>
+              <p class="package_info package_desc">$75/month</p>
+              <p class="package_info package_desc">15 candidates per day</p>
+              <p class="package_info package_desc detailed_1">Coding and Objectve type tests</p>
+            </div>
+            <div class="bottom-section">
+              <button class="button" name="silver" (click)="user.package='silver'">Buy Now</button>
+            </div>
+
+          </div>
+          <div class="card package">
+            <div class="center_text">
+              <br>
+              <h1 class="package_info">Bronze Package</h1>
+              <p class="package_info package_desc">$50/month</p>
+              <p class="package_info package_desc">10 candidates per day</p>
+              <p class="package_info package_desc detailed_1">Coding and Objectve type tests</p>
+
+            </div>
+            <div class="bottom-section">
+              <button class="button" name="bronze" (click)="user.package='bronze'">Buy Now</button>
+            </div>
+
+          </div>
+        </div>
+        <!-- Card Ends -->
+      </div>
+      <div id="section4" class="section">
+        <h2 class="section-heading">Payment Method</h2>
+        <!-- <div class="row"> -->
+        <div class="row">
+          <div class="form-group">
+            <label for="nameoncard">Name on Card</label>
+            <input type="text" id="nameoncard" name="nameoncard" class="form-control" #nameoncard="ngModel" [(ngModel)]="user.nameoncard" placeholder="G Raymond">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="cardnumber">Card Number</label>
+            <input type="text" id="cardnumber" name="cardnumber" class="form-control" #cardnumber="ngModel" [(ngModel)]="user.cardnumber" placeholder="3444 4865 4467 4778">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group offset-by-3">
+            <label for="validthrough">Valid Through</label>
+            <input type="text" id="cardmonthofexpiry" name="cardmonthofexpiry" class="form-control" #cardmonthofexpiry="ngModel" [(ngModel)]="user.cardmonthofexpiry" placeholder="MM">
+          </div>
+          <div class="form-group offset-by-3">
+            <select id="cardyearofexpiry" name="cardyearofexpiry" ng-control="options" [(ngModel)]="user.cardyearofexpiry" class="form-control">
+              <option [value]="2018">2018</option>
+              <option [value]="2019">2019</option>
+              <option [value]="2020">2020</option>
+              <option [value]="2021">2021</option>
+              <option [value]="2022">2022</option>
+              <option [value]="2023">2023</option>
+              <option [value]="2024">2024</option>
+              <option [value]="2025">2025</option>
+            </select>
+
+          </div>
+
+        </div>
+        <div class="button-group-right">
+          <button class="button save-button" [disabled]="!userRegistrationForm.form.valid" routerLink="/test" (click)="onSubmit()">Next</button>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+</div>
+<!-- </div> -->
+
+<!-- form Ends -->
