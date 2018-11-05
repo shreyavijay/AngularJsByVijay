@@ -10,6 +10,11 @@ import { PhoneValidatorDirective } from './phone-validator.directive';
 import { PhoneNumberDirective } from './phone-number.directive';
 import { ValidateEmailDirective } from './validate-email.directive';
 import { EmailValidatorService } from './email-validator.service';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +24,18 @@ import { EmailValidatorService } from './email-validator.service';
     SignUpComponent,
     PhoneValidatorDirective,
     PhoneNumberDirective,
-    ValidateEmailDirective
+    ValidateEmailDirective,
+    UserRegistrationComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent
  ],
   imports: [
     FormsModule,
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
 
-
-  
   providers: [],
   bootstrap: [AppComponent]
 })

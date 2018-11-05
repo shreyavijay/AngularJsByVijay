@@ -1,0 +1,26 @@
+<app-sign-in *ngIf="signIn"></app-sign-in>
+<app-sign-up *ngIf="signUp"></app-sign-up>
+<ul class="horizontal">
+  <li class="horizontal">
+      <a href="#home">Home</a>
+  </li>
+  <li class="horizontal">
+      <a href="#news">News</a>
+  </li>
+  <li class="horizontal">
+      <a href="#contact">Contact</a>
+  </li>
+  <li class="horizontal">
+      <a routerLink="/register" href="#about">About</a>
+  </li>
+  <li class="horizontal">
+      <a (click)="signUp=true">
+          SignUp
+      </a>
+  </li>
+  <li class="horizontal">
+      <a (click)="signIn=true">
+          SignIn
+      </a>
+  </li>
+</ul>
