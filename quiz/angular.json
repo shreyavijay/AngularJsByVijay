@@ -43,7 +43,11 @@
 
 
             ],
-            "scripts": ["src/script/nav.js"]
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/script/nav.js",
+              "src/script/modal.js"
+            ]
           },
           "configurations": {
             "production": {

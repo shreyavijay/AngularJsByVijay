@@ -1,0 +1,60 @@
+<!-- SIGNUP modal start -->
+<form #createTestForm="ngForm">
+
+  <div class="modal" [ngClass]="{'active':activateModal}">
+    <div class="modal-content">
+      <div class="close" (click)="closeModal()">&times;</div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="tname">Name of Test</label>
+          <input type="text" id="tname" name="testname" class="form-control" #testname="ngModel" [(ngModel)]="test.name"
+            required maxlength="40" placeholder="Name of test..">
+          <div *ngIf="testname.invalid && (testname.dirty || testname.touched)" class="alert alert-danger">
+            <div *ngIf="testname.errors?.required">
+              TestName is required.
+            </div>
+            <div *ngIf="testname.errors?.maxlength">
+              TestName exceeds 40 characters.
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="testcategory">Choose appropriate test category</label>
+          <select id="testcategory" name="testcategory" class="form-control" #testcategory="ngModel" [(ngModel)]="test.category">
+            <option value="IT">Online Code Assessment</option>
+            <option value="Accountancy">Math Quiz</option>
+            <option value="Manufacturing">General Knowledge Quiz</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group offset-by-3">
+          <label for="testduration">Duration</label>
+          <input type="text" id="testduration" name="testduration" class="form-control" #testduration="ngModel"
+            [(ngModel)]="test.duration" placeholder="in Minutes">
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input [(ngModel)]="user.password" type="text" id="password" name="password" class="form-control" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+          <label for="confirmpassword">Confirm Password</label>
+          <input [(ngModel)]="user.confirmPassword" type="text" id="confirmpassword" name="password" class="form-control"
+            placeholder="Confirm your password">
+        </div>
+      </div> -->
+
+      <button class="button signup-button" [disabled]="!createTestForm.form.valid" (click)="onSubmit()">Submit</button>
+
+
+    </div>
+
+  </div>
+</form>

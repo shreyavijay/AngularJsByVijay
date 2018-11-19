@@ -1,7 +1,7 @@
 xc c /*stEmailyle    for button of  accordion */
  button.accordion {
 	/* background-color: #4CAF50; */
-	border: 1px solid green;
+	border: 0px solid green;
 	background-color: white;
 	color: green;
 	cursor: pointer;
