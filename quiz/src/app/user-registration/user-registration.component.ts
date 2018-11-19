@@ -10,8 +10,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserRegistrationComponent implements OnInit {
   user: User;
-  // userService: UserService;
-  // route: ActivatedRoute;
   constructor(private route: ActivatedRoute,private userService: UserService) { }
 
   ngOnInit() {
@@ -21,15 +19,12 @@ export class UserRegistrationComponent implements OnInit {
       this.user = this.userService.getUser(params['userId']);
         }
       );
-    // this.user = this.userService.getUser(id.toString()) ;
-    // console.log('UserRegistrationComponent', JSON.stringify(this.));
     console.log('UserRegistrationComponent', JSON.stringify(this.user));
     
   }
 
   onSubmit(): void {
     console.log('Printing Registered User ', JSON.stringify(this.user));
-    // window.open('Registration.html')
   }  
 
 }
