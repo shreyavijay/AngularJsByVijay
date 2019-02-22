@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import {User} from '../user';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,9 +13,11 @@ import { Router } from '@angular/router';
 export class SignUpComponent implements OnInit {
   user: User ;
   activateModal: Boolean;
+  @Output() closeSignUpModal = new EventEmitter<boolean>();
   // userService: UserService;
   // route: Router;
   constructor(private userService: UserService,
+              private loginSrvc: LoginService,
               private route: Router) { }
 
   ngOnInit() {
@@ -24,11 +27,13 @@ export class SignUpComponent implements OnInit {
 
   closeModal(): void {
     this.activateModal = false;
+    this.closeSignUpModal.emit(true);
   }
 
   onSubmit(): void {
     console.log('Printing Signup User ', JSON.stringify(this.user));
     this.userService.addUser(this.user);
+    this.loginSrvc.signIn(this.user.companyEmail, this.user.password, false);
     this.closeModal();
     this.route.navigateByUrl('/register/' + this.user.companyEmail);
     // window.open('Registration.html')

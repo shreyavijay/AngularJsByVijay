@@ -16,9 +16,10 @@ export class AccordionService {
       //Initialize docucment.ready
       $(this).removeClass("active");
     //   $("button.accordion + div.accordion-container").css("display","block");
-      $("button.accordion").click(function () {
+      $("button.accordion").unbind().click(function () {
         $(this).toggleClass("active");
           console.log('Display accordion ',$(this).css("display"));
+          console.log('Display accordion ',$(this));
           $(this).next().toggle().css("display");
           
                 //   if($(this).css("display") === "block"){

@@ -1,45 +1,34 @@
-		<!-- SIGNUP modal start -->
-		<div class="modal" [ngClass]="{'active':activateModal}">
-			<div class="modal-content">
-				<div class="close" (click)="closeModal()">&times;</div>
-				<form>
-					<div class="row">
-						<div class="form-group">
-							<label for="fname">First Name</label>
-							<input type="text" id="fname" name="firstname" class="form-control" placeholder="Your name..">
-						</div>
-						<div class="form-group">
+<!-- SIGNIN modal start -->
+<form [formGroup]="userSignInForm" (ngSubmit)="onSubmit()">
+	<div class="modal" [ngClass]="{'active':activateModal}">
+		<div class="modal-content">
+			<div class="close" (click)="closeModal()">&times;</div>
+			<!-- <form> -->
+				<div *ngIf="invalidCredentials" class="alert alert-danger">
+					Invalid Username/Password
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<label for="username">Username</label>
+						<input type="text" id="username" name="username" formControlName="userName" required class="form-control" placeholder="Username..">
+					</div>
+					<!-- <div class="form-group">
 							<label for="lname">Last Name</label>
 							<input type="text" id="lname" name="lastname" class="form-control" placeholder="Your last name..">
-						</div>
+						</div> -->
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="text" id="password" name="password" formControlName="password" required class="form-control" placeholder="password">
 					</div>
-					<div class="row">
-						<div class="form-group">
-							<label for="companyemail">Company Email</label>
-							<input type="text" id="companyemail" name="companyemail" class="form-control" placeholder="vijay.nagarajan@scotiabank.com">
-						</div>
-					</div>
+				</div>
 
-					<div class="row">
-						<div class="form-group">
-							<label for="mobile">Mobile</label>
-							<input type="text" id="mobile" name="mobile" class="form-control" placeholder="647-891-4283">
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group">
-							<label for="password">Password</label>
-							<input type="text" id="password" name="password" class="form-control" placeholder="Enter your password">
-						</div>
-						<div class="form-group">
-							<label for="confirmpassword">Confirm Password</label>
-							<input type="text" id="confirmpassword" name="password" class="form-control" placeholder="Confirm your password">
-						</div>
-					</div>
 
-					<button class="button signup-button" (click)="signIn()">Sign Up</button>
+				<button class="button signup-button" type="submit">Sign In</button>
 
-				</form>
-			</div>
-
+			<!-- </form> -->
 		</div>
+
+	</div>
+</form>

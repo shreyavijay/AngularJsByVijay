@@ -21,6 +21,9 @@ import { ManageQuestionsComponent } from './manage-questions/manage-questions.co
 import { CreateTestComponent } from './create-test/create-test.component';
 import { DeleteQuestionComponent } from './delete-question/delete-question.component';
 import { ModifyQuestionComponent } from './modify-question/modify-question.component';
+import { CandidateDirectoryComponent } from './candidate-directory/candidate-directory.component';
+import { ModifyCandidateComponent } from './modify-candidate/modify-candidate.component';
+import { DeveloperSignInComponent } from './developer-sign-in/developer-sign-in.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { ModifyQuestionComponent } from './modify-question/modify-question.compo
     ManageQuestionsComponent,
     CreateTestComponent,
     DeleteQuestionComponent,
-    ModifyQuestionComponent
+    ModifyQuestionComponent,
+    CandidateDirectoryComponent,
+    ModifyCandidateComponent,
+    DeveloperSignInComponent
  ],
   imports: [
     FormsModule,

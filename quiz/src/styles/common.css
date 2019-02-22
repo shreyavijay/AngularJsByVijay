@@ -125,8 +125,11 @@ div.section {
 .tooltip {
     position: relative;
     display: inline-block;
-    margin: 10px;
+    margin: 5%;
+    /* width: 40%; */
 }
+
+
 
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -134,8 +137,10 @@ div.section {
     background-color:green;
     z-index: 20;
     position: absolute;
-    top:12px;
-    left:10px;
+    /* top:12px; */
+    top:0px;
+    /* left:10px; */
+    left:25px;
     padding: 2px;    
     text-align: center; 
     border-radius: 5px;

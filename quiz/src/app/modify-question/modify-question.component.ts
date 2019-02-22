@@ -20,6 +20,8 @@ export class ModifyQuestionComponent implements OnInit {
   // @Input('question') questionId: string;
   @Input() action: Action;
   @Output() closeModifyQuestionModal = new EventEmitter<boolean>();
+  constructor(private questionsService: QuestionsService,
+    private fb: FormBuilder) { }
 
   questionForm = this.fb.group({
     question: ['question'],
@@ -43,8 +45,7 @@ export class ModifyQuestionComponent implements OnInit {
     }));
   }
 
-  constructor(private questionsService: QuestionsService,
-    private fb: FormBuilder) { }
+
 
   ngOnInit() {
     console.log('ModifyQuestionComponent print testName11', this.action.testName + ' ' + this.action.questionId);
@@ -58,7 +59,7 @@ export class ModifyQuestionComponent implements OnInit {
   populateQuestion() {
     let question = this.questionsService.getQuestion(this.action.testName, this.action.questionId);
     //Remove Default selections for Edit scenario
-    if (this.aliases.length > 0) {
+    if (this.aliases.length > 0) {  
       for (let count = this.aliases.length - 1; count >= 0; count--) {
         this.aliases.removeAt(count);
       }
@@ -77,8 +78,6 @@ export class ModifyQuestionComponent implements OnInit {
 
   onDelete(): void {
   }
-
-
 
   onSubmit(): void {
     console.log('Printing Question ', this.questionForm.value.question);

@@ -14,7 +14,6 @@ export class UserService {
     // return this.users.length > 0 ? this.users.filter(user => userId == user.companyEmail)[0] : null;
   }
 
-
   getNewUser(): User {
     return new User();
   }
@@ -24,8 +23,10 @@ export class UserService {
     this.users.push(user);
   }
 
-  
-
-
+  authenticateUser(username: string, passwd: string): Boolean {
+    //Username of the Candidate is nothing but email 
+    let user:User = this.getUser(username);
+    return user && user.password == passwd;
+  }
 
 }

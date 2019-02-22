@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   
@@ -8,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerticalNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
   }
+
+  navigateTo(path: string): void {
+    switch(path) {
+      case 'candidatedirectory':
+      this.route.navigateByUrl('/' + path);
+      break;
+    }
+
+  }
+
 
 }
