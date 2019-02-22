@@ -29,11 +29,23 @@ export class TestService {
     return new Test();
   }
 
-  addTest(test: Test) : void {
+  addTest(test: Test): void {
     console.log('Test Added',test);
     this.tests.push(test);
   }
 
+  //For Now it allows editing Developers only
+  addDeveloperToTest(developer: Developer): void {
+    let test: Test = this.getTest(developer.testName);
+    // let match = test && test.developers ? test.developers.findIndex(dev => dev.firstName == developer.firstName && 
+    //                                   dev.lastName == developer.lastName) : null;
+    let match = test && test.developers ? test.developers.findIndex(dev => dev.email == developer.email) : null;                                      
+    if(match == -1) {
+      test.developers.push(developer);
+    }                                      
+  }
+
 }
+
 
 

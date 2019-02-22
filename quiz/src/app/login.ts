@@ -1,12 +1,15 @@
 import { Developer } from "./developer";
+import { User } from "./user";
 
-export class Action {
-    action: string;
-    testName: string;
-    questionId: string;
-    developerEmail: string;
+export class Login {
+    developer: Developer;
+    //Indicates Employee
+    user: User;
 
-    
+    constructor(developer: Developer,user: User){
+        this.developer = developer;
+        this.user = user;
+    }
     // mobile: string;
     // password: string;
     // confirmPassword: string;
