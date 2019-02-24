@@ -65,11 +65,11 @@ export class ModifyQuestionComponent implements OnInit {
       }
     }
     this.questionForm.controls.question.setValue(question.questionDescription);
-    question.answers.map(answer => this.aliases.push(this.fb.group({
+    question.choice.map(answer => this.aliases.push(this.fb.group({
       answer: [answer],
       deleteButton: ['Delete']
     })));
-    question.answers = this.questionForm.value.aliases.map(alias => alias.answer);
+    question.choice = this.questionForm.value.aliases.map(alias => alias.answer);
   }
 
   closeModal(): void {
@@ -86,7 +86,7 @@ export class ModifyQuestionComponent implements OnInit {
     let answers: string[];
     question.testName = this.action.testName;
     question.questionDescription = this.questionForm.value.question;
-    question.answers = this.questionForm.value.aliases.map(alias => alias.answer);
+    question.choice = this.questionForm.value.aliases.map(alias => alias.answer);
     console.log('Printing complete Question Saved ', question);    
     //Action = Edit
     if(this.action.questionId) {

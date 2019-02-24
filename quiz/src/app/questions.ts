@@ -3,13 +3,15 @@ import { Developer } from "./developer";
 export class Question {
     testName: string;
     questionDescription: string;
-    answers: string[];
+    // answers: string[];
+    choice: string[];
     id: string;
 
     constructor(testName: string,questionDescription: string,answers: string[],id: string ){
         this.testName = testName;
         this.questionDescription = questionDescription;
-        this.answers = [];
+        // this.answers = [];
+        this.choice = [];
         this.id = id;
 
     }

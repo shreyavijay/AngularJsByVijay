@@ -1,5 +1,6 @@
-<app-sign-in *ngIf="signIn" (closeSignInModal)="onCloseSignInModal($event)"></app-sign-in>
-<app-sign-up *ngIf="signUp" (closeSignUpModal)="oncloseSignUpModal($event)"></app-sign-up>
+<app-sign-in *ngIf="signIn" (closeSignInModal)="onCloseModal($event)"></app-sign-in>
+<app-sign-up *ngIf="signUp" (closeSignUpModal)="onCloseModal($event)"></app-sign-up>
+<app-developer-sign-in *ngIf="developerSignIn" (closeDeveloprSignInModal)="onCloseModal($event)"></app-developer-sign-in>
 <ul class="horizontal">
   <li class="horizontal">
       <a href="#home">Home</a>
@@ -18,11 +19,11 @@
           SignUp
       </a>
   </li>
-  <!-- <li *ngIf="!loginSrvc.userSignedIn()" class="horizontal" style="float:right">
-      <a (click)="signIn=true" (closeSignInModal)="onCloseSignInModal($event)">
+  <li *ngIf="!loginSrvc.userSignedIn()" class="horizontal" style="float:right">
+      <a (click)="developerSignIn=true">
           Developer SignIn
       </a>
-  </li> -->
+  </li>
   <li *ngIf="!loginSrvc.userSignedIn()" class="horizontal" style="float:right">
     <a (click)="signIn=true" >
         Employer SignIn

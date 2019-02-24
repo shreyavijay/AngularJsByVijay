@@ -8,7 +8,7 @@
           <div *ngFor="let question of loadQuestions(); let i=index" class="section accordion-wrapper">
               <button class="accordion" id="questionButton">{{question.questionDescription}}</button>
               <div class="accordion-container">
-                  <p class="answer" *ngFor="let answer of question.answers; let j=index">{{j+1}}. {{answer}}</p>
+                  <p class="answer" *ngFor="let option of question.choice; let j=index">{{j+1}}. {{option}}</p>
                   <div class="button-group-right">
                       <button class="button save-button" (click)="addEditQuestion(question)">Edit</button>
                       <app-modify-question *ngIf="modifyQuestion" [action]="action" (closeModifyQuestionModal)="oncloseModal($event)"></app-modify-question>
