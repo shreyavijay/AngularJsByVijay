@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
   signUp: Boolean = false;
   signIn: Boolean = false;
+  developerSignIn: Boolean = false;
 
   constructor(public loginSrvc:LoginService) { }
 
@@ -19,13 +20,12 @@ export class HeaderComponent implements OnInit {
   signUpFn(flag:Boolean) {
     this.signUp = flag;
   }
-  onCloseSignInModal(close: Boolean) {
-    this.signIn = !close;
-  }
 
-  oncloseSignUpModal(close: boolean) {
+  onCloseModal(close: boolean) {
+    this.signIn = !close;
+    this.developerSignIn = !close;
     this.signUp = !close;
-  }  
+  }
 
 }
  

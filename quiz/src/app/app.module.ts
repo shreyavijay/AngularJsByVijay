@@ -24,6 +24,9 @@ import { ModifyQuestionComponent } from './modify-question/modify-question.compo
 import { CandidateDirectoryComponent } from './candidate-directory/candidate-directory.component';
 import { ModifyCandidateComponent } from './modify-candidate/modify-candidate.component';
 import { DeveloperSignInComponent } from './developer-sign-in/developer-sign-in.component';
+import { DeveloperDisclosureComponent } from './developer-disclosure/developer-disclosure.component';
+import { AssessmentComponent } from './assessment/assessment.component';
+import { QuestionAssessmentComponent } from './question-assessment/question-assessment.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { DeveloperSignInComponent } from './developer-sign-in/developer-sign-in.
     ModifyQuestionComponent,
     CandidateDirectoryComponent,
     ModifyCandidateComponent,
-    DeveloperSignInComponent
+    DeveloperSignInComponent,
+    DeveloperDisclosureComponent,
+    AssessmentComponent,
+    QuestionAssessmentComponent
  ],
   imports: [
     FormsModule,

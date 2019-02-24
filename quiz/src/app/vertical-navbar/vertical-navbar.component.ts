@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
+import { ValueTransformer } from '@angular/compiler/src/util';
 
 @Component({
   
@@ -8,19 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./vertical-navbar.component.css']
 })
 export class VerticalNavbarComponent implements OnInit {
-
+  extras: NavigationExtras = {skipLocationChange: true};
   constructor(private route: Router) { }
-
   ngOnInit() {
   }
 
   navigateTo(path: string): void {
     switch(path) {
       case 'candidatedirectory':
-      this.route.navigateByUrl('/' + path);
+      this.route.navigate([path], {skipLocationChange: true});
       break;
     }
 
+  }
+  ngOnDestroy() {
   }
 
 
