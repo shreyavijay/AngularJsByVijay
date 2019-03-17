@@ -1,3 +1,12 @@
+/* Developer */
+:root {
+    --main-bg-color: coral; 
+    --container-left-pos: 25px;
+    --checkmark-left-pos: -28px;
+    --checkmark-top-pos: -5px;
+    
+  }
+  
 .container > input {
     position: absolute;
     cursor: pointer;
@@ -6,7 +15,9 @@
 
 .container {
     position: relative;
-    left: 25px;
+    left: var(--container-left-pos);
+    /* Manage Questions left: 2px; */
+    /* Developer left: 25px; */
     display: block;
     cursor: pointer;
     font-size: 14px;
@@ -16,8 +27,10 @@
 
 .checkmark {
     position: absolute;
-    left: -28px;
-    top: -5px;
+    left: var(--checkmark-left-pos);
+    /* Manage Questions left: -5px; */
+    /* Developer left: -28px; */
+    top: var(--checkmark-top-pos);
     height: 20px;
     width: 20px;
     /* background-color: #2196F3; */

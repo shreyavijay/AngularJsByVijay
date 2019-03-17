@@ -5,6 +5,7 @@ export class Question {
     questionDescription: string;
     // answers: string[];
     choice: string[];
+    answer: number[];
     id: string;
 
     constructor(testName: string,questionDescription: string,answers: string[],id: string ){

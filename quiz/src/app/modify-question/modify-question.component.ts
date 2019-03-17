@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { FormBuilder, FormArray } from '@angular/forms';
+import { FormBuilder, FormArray, FormGroup, AbstractControl } from '@angular/forms';
 
 import { QuestionsService } from '../questions.service';
 import { Question } from '../questions';
@@ -28,7 +28,8 @@ export class ModifyQuestionComponent implements OnInit {
 
     aliases: this.fb.array([
       this.fb.group({
-        answer: ['answer1'],
+        choice: [''],
+        answer: [''],
         deleteButton: ['Delete']
       })
     ])
@@ -40,7 +41,8 @@ export class ModifyQuestionComponent implements OnInit {
 
   addAlias() {
     this.aliases.push(this.fb.group({
-      answer: ['answer1'],
+      choice: [''],
+      answer: [''],
       deleteButton: ['Delete']
     }));
   }
@@ -65,11 +67,28 @@ export class ModifyQuestionComponent implements OnInit {
       }
     }
     this.questionForm.controls.question.setValue(question.questionDescription);
-    question.choice.map(answer => this.aliases.push(this.fb.group({
-      answer: [answer],
+    let index = 0;
+    question.choice.map(choiceDesc => {
+      this.aliases.push(this.fb.group({
+      choice: [choiceDesc],
+      answer: [false],
       deleteButton: ['Delete']
-    })));
-    question.choice = this.questionForm.value.aliases.map(alias => alias.answer);
+    }));
+  });
+  if(question.answer && question.answer.length > 0  ) {
+    question.answer.forEach(answer => {
+      if(answer < question.choice.length) {
+        // this.aliases[answer].answer.setValue(true);
+        if(answer >= 0) {
+          // console.log('this.aliases.at(answer)',this.aliases.at(answer).controls.answer.setValue(true));
+          let fg:FormGroup = <FormGroup>this.aliases.at(answer);
+          fg.controls.answer.setValue(true);
+        }
+      }
+    }); 
+    this.questionForm.controls.question.setValue(question.questionDescription);
+ }
+    question.choice = this.questionForm.value.aliases.map(alias => alias.choice);
   }
 
   closeModal(): void {
@@ -86,7 +105,20 @@ export class ModifyQuestionComponent implements OnInit {
     let answers: string[];
     question.testName = this.action.testName;
     question.questionDescription = this.questionForm.value.question;
-    question.choice = this.questionForm.value.aliases.map(alias => alias.answer);
+    question.choice = this.questionForm.value.aliases.map(alias => alias.choice);
+    let index = 0;
+    question.answer = this.questionForm.value.aliases.map(alias => {
+      index++;
+      if(alias.answer) {
+        
+        return (index-1);
+      } 
+      return -1;
+      
+    });
+    this.questionForm.value.aliases.map(alias => {
+      console.log('Anwer Choice',alias.answer);
+    });
     console.log('Printing complete Question Saved ', question);    
     //Action = Edit
     if(this.action.questionId) {

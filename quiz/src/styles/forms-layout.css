@@ -20,6 +20,14 @@ div.form-group.offset-2 {
 	width: 34%;
 }
 
+.form-group.offset-by-4{
+	width: 15%;
+}
+
+.form-group.offset-by-5{
+	width: 7%;
+}
+
 div.form-group > label{
 	font-size: 14px;
 	font-style: Sans;

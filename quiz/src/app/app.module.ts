@@ -27,6 +27,7 @@ import { DeveloperSignInComponent } from './developer-sign-in/developer-sign-in.
 import { DeveloperDisclosureComponent } from './developer-disclosure/developer-disclosure.component';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { QuestionAssessmentComponent } from './question-assessment/question-assessment.component';
+import { ExitTestComponent } from './exit-test/exit-test.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { QuestionAssessmentComponent } from './question-assessment/question-asse
     DeveloperSignInComponent,
     DeveloperDisclosureComponent,
     AssessmentComponent,
-    QuestionAssessmentComponent
+    QuestionAssessmentComponent,
+    ExitTestComponent
  ],
   imports: [
     FormsModule,

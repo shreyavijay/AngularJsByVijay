@@ -1,6 +1,7 @@
 <div class="form-container-wrapper">
   <div class="form-container">
     <!-- <div id="section_form1" class="section"> -->
-    <app-question-assessment [question]="question" (moveToNextQuestion)="next($event)"></app-question-assessment>
+    <app-question-assessment #questionComponent *ngIf="displayQuestion" [question]="question" (moveToNextQuestion)="next($event)"></app-question-assessment>
+    <app-exit-test *ngIf="exitTest"></app-exit-test>
   </div>
 </div>

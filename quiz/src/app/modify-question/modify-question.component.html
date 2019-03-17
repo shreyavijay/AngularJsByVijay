@@ -20,13 +20,19 @@
 
 			</div>
 
-			<div formArrayName="aliases" *ngFor="let answer of aliases.controls; let i=index">
+			<div formArrayName="aliases" *ngFor="let option of aliases.controls; let i=index">
 				<div class="row" [formGroupName]="i">
 					<div class="form-group offset-1">
-						<label for="answer">Answer</label>
-						<textarea rows="4" cols="50" id="answer" name="answer" formControlName="answer" class="form-control" placeholder="Enter possible choices.."></textarea>
+						<label for="option">Option</label>
+						<textarea rows="4" cols="50" id="option" name="option" formControlName="choice" class="form-control" placeholder="Enter possible choices.."></textarea>
 					</div>
-					<div class="form-group offset-by-3">
+					<div class="form-group offset-by-5">
+						<label class="container" style="--container-left-pos:2px">Answer
+							<input type="checkbox" checked="checked" value="selected" formControlName="answer">
+							<span class="checkmark" style="--checkmark-left-pos:10px;--checkmark-top-pos:20px"></span>
+						</label>
+					</div>
+					<div class="form-group offset-by-4">
 						<label for="answer">&nbsp;</label>
 						<button class="button repeat-button" routerLink="/register" (click)="onDelete()">Delete</button>
 					</div>
