@@ -98,6 +98,9 @@ export class CandidateService {
           }
 
         });
+        if(devResponseQuestion.answer.length != question.answer.filter(ans => ans != -1).length) {
+          correctAnswer = false;
+        }
         if(correctAnswer) {
           score++;
         }
