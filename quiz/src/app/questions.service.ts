@@ -6,12 +6,12 @@ import { Question } from './questions';
 })
 export class QuestionsService {
   questions: Question[] = [
-    {testName: 'Java8 Online Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'1111'},
-    {testName: 'Javascript ES6 Fundamentals Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'2222'},
-    {testName: 'HTML CSS3 and Javascript' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'3333'},
-    {testName: 'AngularJS Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'4444'},
-    {testName: 'Angular Material Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'5555'},
-    {testName: 'React Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'6666'}
+    {testName: 'Java8 Online Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'1111', answer: [1]},
+    {testName: 'Javascript ES6 Fundamentals Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'2222', answer: [1]},
+    {testName: 'HTML CSS3 and Javascript' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'3333',answer: [1]},
+    {testName: 'AngularJS Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'4444',answer: [1]},
+    {testName: 'Angular Material Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'5555',answer: [1]},
+    {testName: 'React Assessment' , questionDescription: 'Choose 7 wonders of the world', choice: ['Taj Mahal', 'New York','White House', 'Toronto'], id:'6666',answer: [1]}
   ];
 
   constructor() { }
@@ -45,7 +45,11 @@ export class QuestionsService {
     if(questions.length > 0) {
       questions[0].questionDescription = modifiedQuestion.questionDescription;
       questions[0].choice = modifiedQuestion.choice;
+      if(questions[0].answer && questions[0].answer.length > 0){
+        questions[0].answer = modifiedQuestion.answer;        
+      }
     }
+    
   }
 
 

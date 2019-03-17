@@ -1,39 +1,24 @@
+<form [formGroup]="assessementForm">
+
 <div id="section1" class="section">
     <h2 class="section-heading"> Java Online Assessement </h2>
     <p class="question challengeFont">
       {{question.questionDescription}}
     </p>
-    <p class="answer challengeFont" *ngFor="let option of question.choice">
-      <!-- <input type="checkbox" name="optionCheckBox" checked="checked" value="selected">
-              <label for="optionCheckBox">Option 1</label> -->
-      <label class="container">{{option}}
-        <input type="checkbox" checked="checked" value="selected">
-        <span class="checkmark"></span>
-      </label>
-    </p>
-    <!-- <p class="answer challengeFont">
-      <label class="container">Option 2 Given an array of Player objects, write a comparator that sorts them in order
-        of decreasing score;
-        <input type="checkbox" checked="checked" value="selected">
-        <span class="checkmark"></span>
-      </label>
-    </p>
-    <p class="answer challengeFont">
-      <label class="container">Option 3 Given an array of Player objects, write a comparator that sorts them in order
-        of decreasing score;
-        <input type="checkbox" checked="checked" value="selected">
-        <span class="checkmark"></span>
-      </label>
-    </p>
-    <p class="answer challengeFont">
-      <label class="container">Option 4 Given an array of Player objects, write a comparator that sorts them in order
-        of decreasing score;
-        <input type="checkbox" checked="checked" value="selected">
-        <span class="checkmark"></span>
-      </label>
-    </p> -->
-
+    <div *ngIf="choicesLoaded">
+    <div formArrayName="aliases" *ngFor="let choice of aliases.controls; let i=index">
+      <div class="answer challengeFont" [formGroupName]="i">
+        <!-- <input type="checkbox" name="optionCheckBox" checked="checked" value="selected">
+                  <label for="optionCheckBox">Option 1</label> -->
+        <label class="container">{{choice.get('choiceDesc').value}}
+          <input type="checkbox" checked="checked" value="selected" formControlName="option">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
     <div class="button-group-right">
       <button class="button save-button" (click)="nextQuestion()">Next</button>
     </div>
   </div>
+</form>  

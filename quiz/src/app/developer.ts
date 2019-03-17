@@ -1,3 +1,5 @@
+import { Question } from "./questions";
+
 export class Developer {
     // name: string;
     firstName: string;
@@ -8,4 +10,13 @@ export class Developer {
     password: string;
     confirmPassword: string; 
     testName: string;
+    score: number;
+    developerResponse: DeveloperResponse[] = [];
+}
+
+
+export class DeveloperResponse {
+    // name: string;
+    questionId: string;
+    answer: number[];
 }
