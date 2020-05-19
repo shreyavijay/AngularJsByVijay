@@ -31,36 +31,38 @@
                   <button class="button create" (click)="addEditCandidate()">Add New Candidate</button>                            
                   <app-modify-candidate *ngIf="addNewCandidate" [action]="action" (closeModifyQuestionModal)="oncloseModal($event)"></app-modify-candidate>
               </div>
-              <table>
-                  <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Test</th>
-                      <th>Edit</th>
-                      <th>Delete</th>
-                  </tr>
-                  <tr *ngFor="let dev of developers;let i=index">
-                      <td class="format">{{dev.firstName}} {{dev.lastName}}</td>
-                      <td class="format">{{dev.email}}</td>
-                      <td class="format">{{dev.testName}}</td>
-                      <td>
-                          <div class="tooltip">
-                              <i class="fa fa-edit fa-lg" (click)="addEditCandidate(dev)" style="color:green;"></i>
-                              <span class="tooltiptext">Edit</span>
-                          </div>
-                            <app-modify-candidate *ngIf="modifyCandidate" [action]="action" (closeModifyQuestionModal)="oncloseModal($event)"></app-modify-candidate>  
-                      </td>
-                      <td>
+              <div style="overflow-x:auto;white-space: nowrap">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Test</th>
+                        <th>Edit</th>
+                        <th style="margin-right: 10px;">Delete</th>
+                    </tr>
+                    <tr *ngFor="let dev of developers;let i=index">
+                        <td class="format">{{dev.firstName}} {{dev.lastName}}</td>
+                        <td class="format">{{dev.email}}</td>
+                        <td class="format">{{dev.testName}}</td>
+                        <td>
                             <div class="tooltip">
-                                <i class="fa fa-trash fa-lg" style="color:green;"></i>
-                                <span class="tooltiptext">Delete</span>
+                                <i class="fa fa-edit fa-lg" (click)="addEditCandidate(dev)" style="color:green;"></i>
+                                <span class="tooltiptext">Edit</span>
                             </div>
-                      </td>    
+                                <app-modify-candidate *ngIf="modifyCandidate" [action]="action" (closeModifyQuestionModal)="oncloseModal($event)"></app-modify-candidate>  
+                        </td>
+                        <td style="margin-right: 10px;">
+                                <div class="tooltip">
+                                    <i class="fa fa-trash fa-lg" style="color:green;"></i>
+                                    <span class="tooltiptext">Delete</span>
+                                </div>
+                        </td>    
 
-                  </tr>
-           
+                    </tr>
+            
 
-              </table>
+                </table>
+              </div>
           </div>
       </div>
   </div>

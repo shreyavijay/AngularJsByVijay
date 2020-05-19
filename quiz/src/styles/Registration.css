@@ -87,8 +87,19 @@ h2.section-heading {
 	width: 200px;
 	padding: 0px;
 	box-shadow: 0 4px 8px 0 #ddd, 0 6px 20px 0 #ddd;
-	/* border: 1px solid green; */
 }
+
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.card.package{
+		width: 200px;
+	}
+	.test_info{
+		margin: 2px;	
+	}
+
+  }
 
 .card.package.top-green{
 	border-top-color: green;

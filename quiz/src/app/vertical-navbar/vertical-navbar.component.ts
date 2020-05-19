@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, NgZone } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { ValueTransformer } from '@angular/compiler/src/util';
+import {  ChangeDetectorRef } from '@angular/core';
 
+declare var $: any;
 @Component({
   
   selector: 'app-vertical-navbar',
@@ -9,21 +11,33 @@ import { ValueTransformer } from '@angular/compiler/src/util';
   styleUrls: ['./vertical-navbar.component.css']
 })
 export class VerticalNavbarComponent implements OnInit {
+  varDisplayPanel: boolean = true;
+  menubarFlag: boolean = true;
   extras: NavigationExtras = {skipLocationChange: true};
-  constructor(private route: Router) { }
+  
+  constructor(private route: Router,
+              private cdr: ChangeDetectorRef,
+              private zone: NgZone
+              ) { }
+
   ngOnInit() {
+    
   }
 
   navigateTo(path: string): void {
-    switch(path) {
-      case 'candidatedirectory':
-      this.route.navigate([path], {skipLocationChange: true});
-      break;
-    }
-
-  }
-  ngOnDestroy() {
+    this.zone.run(() => {
+      this.route.navigate([path], {skipLocationChange: true}).then;
+    });    
+    
   }
 
+  toggleDisplayOfNavPanel(flag: boolean):void {
+    this.varDisplayPanel = flag;
+    this.cdr.detectChanges();
+    console.log('VerticalNavbarComponent toggleDisplayOfNavPanel ',this.varDisplayPanel);
+  }
+
+   ngOnDestroy() {
+  }
 
 }

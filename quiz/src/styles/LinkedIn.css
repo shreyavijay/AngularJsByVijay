@@ -119,7 +119,18 @@ img.connections {
   display: flex;
   margin: 0px;
   flex-flow: row wrap;
+  
 }
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+/* 1024px */
+@media screen and (max-width: 1121px) {
+	.card-page {
+		justify-content: space-evenly;
+		
+	  }
+  }
+
 
 .card-section {
   padding: 5px 20px;

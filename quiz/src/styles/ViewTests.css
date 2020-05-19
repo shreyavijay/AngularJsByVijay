@@ -1,6 +1,7 @@
 .test_info {
 	color: green;
-	margin: 10px;
+    margin: 10px;
+    font-size: 95%;
 }
 
 .test_info:hover {

@@ -2,6 +2,15 @@
 <app-sign-up *ngIf="signUp" (closeSignUpModal)="onCloseModal($event)"></app-sign-up>
 <app-developer-sign-in *ngIf="developerSignIn" (closeDeveloprSignInModal)="onCloseModal($event)"></app-developer-sign-in>
 <ul class="horizontal">
+<li class="vertical" *ngIf="menubarFlag">
+    <!-- <a href="#manageTests" id="manageTests">Manage Tests</a> -->
+    <a id="menu" class="menubar" (click)="toggleDisplayOfNavPanel()">
+        <!-- <i class="fa fa-bars" aria-hidden="true">Menu</i> -->
+        <!-- <i class="fas fa-bars" style="font-size:24px;color:white">f0c9</i> -->
+        <i class="fa menuicon">&#xf0c9;&nbsp;</i>
+    </a>
+
+</li>
   <li class="horizontal">
       <a href="#home">Home</a>
   </li>

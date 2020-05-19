@@ -16,5 +16,5 @@ export class User {
     cardnumber: string;
     cardmonthofexpiry: string;
     cardyearofexpiry: string;
-
+    package: string;
 }
