@@ -1,0 +1,10 @@
+i.menuicon {
+    font-size:24px;
+    margin-right: 5px;
+    border: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    /* top: -19px;
+    left:-11px; */
+}

@@ -19,6 +19,8 @@
     box-shadow: 0 4px 8px 0 #ddd, 0 6px 20px 0 #ddd;    
     max-height: 65%;
     overflow: auto;
+    border-radius: 1%;
+    padding: 1%;
 }
 
 .modal-html {

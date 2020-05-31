@@ -58,8 +58,9 @@ div.form-container-wrapper {
 	top: 50px;
 	/* left: 300px; */
 	left: 25%;
-	width: 60%;
-	/* max-height: 80%; */
+	width: 60vw;
+	/* width: 60%; */
+	/* width: 1050px; */
 	margin: 10px;
 	padding: 10px;
 	margin-bottom: 300px;
@@ -67,16 +68,81 @@ div.form-container-wrapper {
 	position: absolute;
 
 }
+/* 768 */
+/* On screens that are 1272px to 1627px wide, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+	div.form-container-wrapper {
+		left: 6%;
+		width: 650px;
+	}
+  }
+
+/* On screens that are 1272px to 1627px wide, make the menu links stack on top of each other instead of next to each other */
+@media screen and (min-width: 769px) and (max-width: 1121px) {
+	div.form-container-wrapper {
+		/* left: 6%; */
+		width: 650px;
+	}
+  }  
+
+/* On screens that are 1272px to 1627px wide, make the menu links stack on top of each other instead of next to each other */
+@media screen and (min-width: 1122px) and (max-width: 1268px) {
+	div.form-container-wrapper {
+		width: 775px;
+	}
+	div.section {
+		padding-left: 15px;
+	}	
+  }
+
+/* On screens that are 1272px to 1627px wide, make the menu links stack on top of each other instead of next to each other */
+@media screen and (min-width: 1269px) and (max-width: 1480px) {
+	div.form-container-wrapper {
+		/* width: 650px; */
+		width: 775px;
+	}	
+	div.section {
+		padding-left: 15px;
+	}		
+  }
+
+/* On screens that are 1272px to 1627px wide, make the menu links stack on top of each other instead of next to each other */
+@media screen and (min-width: 1480px) {
+	div.form-container-wrapper {
+		/* width: 650px; */
+		width: 1000px;
+	}	
+	div.section {
+		padding-left: 15px;
+	}		
+  }
+
+
+/* On screens that are 1628px to 1974px wide, make the menu links stack on top of each other instead of next to each other */
+@media screen and (min-width: 1628px) and (max-width: 1974px) {
+	div.form-container-wrapper {
+		width: 986px;
+	}	
+	div.section {
+		padding-left: 15px;
+	}		
+  }
+
+/* On screens that are 1628px to 1974px wide, make the menu links stack on top of each other instead of next to each other */
+@media screen and (min-width: 1975px) {
+	div.form-container-wrapper {
+		/* width: 1187.39px; */
+		width: 1190.39px;
+	}	
+	div.section {
+		padding-left: 15px;
+	}		
+  }  
+
+
+
+
 div.form-container {
 	z-index: 1;
 	position: relative!important;
-	/* float: left; */
-	/* position: relative!important; */
-	/* position: relative!important; */
-	/* top: 45px;
-	left: 250px;
-	width: 60%;
-	margin: 10px;
-	padding: 10px;
-	margin-bottom: 300px; */
 }

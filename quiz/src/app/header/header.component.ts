@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, Output, EventEmitter } from '@angular/core';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -7,14 +7,17 @@ import { LoginService } from '../login.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  menubarFlag: boolean = true;
   signUp: Boolean = false;
   signIn: Boolean = false;
   developerSignIn: Boolean = false;
-
-  constructor(public loginSrvc:LoginService) { }
+  displayNavPanel: boolean = true;
+  @Output() toggleNavPanel = new EventEmitter<boolean>();
+  constructor(public loginSrvc:LoginService,
+              private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
+    console.log('HeaderComponent ngOnInit',this.menubarFlag);
   }
 
   signUpFn(flag:Boolean) {
@@ -26,6 +29,19 @@ export class HeaderComponent implements OnInit {
     this.developerSignIn = !close;
     this.signUp = !close;
   }
+
+  setMenubarBtnFlag(flag: boolean): void {
+    this.menubarFlag = flag;
+    this.cdr.detectChanges();
+    this.toggleDisplayOfNavPanel();
+  }
+
+  toggleDisplayOfNavPanel(): void {
+    this.displayNavPanel = this.menubarFlag ? !this.displayNavPanel : true;
+    this.toggleNavPanel.emit(this.displayNavPanel);
+  }
+  
+
 
 }
  

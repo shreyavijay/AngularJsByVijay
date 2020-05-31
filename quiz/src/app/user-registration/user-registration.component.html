@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="button-group-right">
-          <button class="button save-button">Next</button>
+          <button class="button save-button" (click)="scrollBarService.scrollToNextSection(2)">Next</button>
         </div>
       </div>
       <div id="section2" class="section">
@@ -76,7 +76,7 @@
           <input type="text" id="postalzipcode" name="postalzipcode" class="form-control" #postalcode="ngModel" [(ngModel)]="user.postalcode" placeholder="L6X 3T1">
         </div>
         <div class="button-group-right">
-          <button class="button save-button">Next</button>
+          <button class="button save-button" (click)="scrollBarService.scrollToNextSection(3)">Next</button>
         </div>
       </div>
       <div id="section3" class="section">
@@ -93,7 +93,8 @@
               <p class="package_info package_desc detailed_1">Coding and Objectve type tests</p>
             </div>
             <div class="bottom-section">
-              <button class="button" name="gold" (click)="user.package='gold'">Buy Now</button>
+              <button class="button" name="gold" (click)="selectPackage('gold')" 
+                      [ngClass]="{ 'selected': user?.package=='gold' }">Buy Now</button>
             </div>
 
           </div>
@@ -106,7 +107,8 @@
               <p class="package_info package_desc detailed_1">Coding and Objectve type tests</p>
             </div>
             <div class="bottom-section">
-              <button class="button" name="silver" (click)="user.package='silver'">Buy Now</button>
+              <button class="button" name="silver" (click)="selectPackage('silver')" 
+                      [ngClass]="{'selected': user?.package=='silver' }">Buy Now</button>
             </div>
 
           </div>
@@ -120,7 +122,8 @@
 
             </div>
             <div class="bottom-section">
-              <button class="button" name="bronze" (click)="user.package='bronze'">Buy Now</button>
+              <button class="button" name="bronze" (click)="selectPackage('bronze')"
+                      [ngClass]="{'selected': user?.package=='bronze' }">Buy Now</button>
             </div>
 
           </div>
