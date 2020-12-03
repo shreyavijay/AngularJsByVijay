@@ -1,20 +1,37 @@
-import { Component, OnInit, ChangeDetectorRef, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { from, Subscription } from 'rxjs';
 import { LoginService } from '../login.service';
+import { MenubarService} from '../menubar.service'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit,OnDestroy {
   menubarFlag: boolean = true;
   signUp: Boolean = false;
   signIn: Boolean = false;
   developerSignIn: Boolean = false;
   displayNavPanel: boolean = true;
+  subscription: Subscription;
   @Output() toggleNavPanel = new EventEmitter<boolean>();
   constructor(public loginSrvc:LoginService,
-              private cdr: ChangeDetectorRef) { }
+              private menubarSvc:MenubarService,
+              private cdr: ChangeDetectorRef) { 
+    
+    this.subscription = this.menubarSvc.displayNavPanel$.subscribe(
+        displayNavPanel => {
+          console.log('Confirm Subscription in Header');
+          if(!displayNavPanel) {
+            //Hide NavBar Panel on MouseDown event
+            this.toggleDisplayOfNavPanel(); 
+          }
+          
+        }
+      );
+
+    }
 
   ngOnInit() {
     console.log('HeaderComponent ngOnInit',this.menubarFlag);
@@ -41,7 +58,10 @@ export class HeaderComponent implements OnInit {
     this.toggleNavPanel.emit(this.displayNavPanel);
   }
   
-
+  ngOnDestroy() {
+    // prevent memory leak when component destroyed
+    this.subscription.unsubscribe();
+  }
 
 }
  
